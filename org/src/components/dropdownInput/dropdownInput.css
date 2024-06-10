@@ -1,0 +1,37 @@
+.dropdown__list label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.dropdown__list select {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border: none;
+    padding: 15px 10px;
+    outline-color: #6278f7;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.error__message {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media (min-width: 1045px) {
+    .dropdown__list label {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .dropdown__list select {
+        padding: 25px 30px;
+        font-size: 18px;
+    }
+}

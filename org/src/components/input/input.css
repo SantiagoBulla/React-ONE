@@ -1,0 +1,52 @@
+.input {
+    margin: 24px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input label {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input input {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border: none;
+    padding: 15px 10px;
+    outline-color: #6278f7;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.input__color input {
+    height: 40px;
+    padding: 5px 20px;
+}
+
+.error__message {
+    color: tomato;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (min-width: 1045px) {
+    .input label {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .input input {
+        padding: 25px 30px;
+        font-size: 18px;
+    }
+
+    .input__color input {
+        height: 40px;
+        padding: 5px 20px;
+    }
+}

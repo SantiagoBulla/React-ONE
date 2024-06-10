@@ -1,0 +1,31 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.form form {
+    background-color: #f7f7f7;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 8px 50px;
+    flex: 1;
+}
+
+.form h2 {
+    font-size: 25px;
+    font-weight: 400;
+    color: #212121;
+}
+
+@media (min-width: 1045px) {
+    .form {
+        flex-direction: row;
+    }
+
+    .form h2 {
+        font-size: 35px;
+    }
+}

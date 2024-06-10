@@ -1,0 +1,25 @@
+import './footer.css'
+
+const Footer = () => {
+    return (
+        <footer className='footer' style={{ backgroundImage: "url(/img/footer.png)" }}>
+            <div className='social'>
+                <div className="social__icons">
+                    <a href='https://www.aluracursos.com/'>
+                        <img src="/img/facebook.png" alt='Facebook' />
+                    </a>
+                    <a href='https://www.aluracursos.com/'>
+                        <img src="/img/twitter.png" alt='twitter' />
+                    </a>
+                    <a href='https://www.aluracursos.com/'>
+                        <img src="/img/instagram.png" alt='instagram' />
+                    </a>
+                </div>
+                <img src='/img/Logo.png' alt='org' />
+            </div>
+            <strong>Desarrollado por Santiago Bulla</strong>
+        </footer>
+    )
+}
+
+export default Footer
