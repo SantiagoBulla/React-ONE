@@ -30,6 +30,9 @@ const Form = (props) => {
     const [showErrorMessageColor, setShowErrorMessageColor] = useState(false)
     const [errorMessageColor, setErrorMessageColor] = useState('Error message')
 
+    const [partnerDataValid, setPartnerDataValid] = useState(false)
+    const [teamDataValid, setTeamDataValid] = useState(false)
+
     const { onSubmitAction, onSubmitTeamForm } = props;
 
     const ERROR_EMPTY = '¡Este es un campo obligatorio!'
@@ -40,36 +43,44 @@ const Form = (props) => {
         if (validations.validateEmptyFields(name)) {
             setErrorMessageName(ERROR_EMPTY);
             setShowErrorMessageName(true);
+            setPartnerDataValid(false)
         } else {
             setShowErrorMessageName(false);
+            setPartnerDataValid(true)
         }
 
         if (validations.validateEmptyFields(position)) {
             setErrorMessagePosition(ERROR_EMPTY);
             setShowErrorMessagePosition(true);
+            setPartnerDataValid(false)
         } else {
             setShowErrorMessagePosition(false);
+            setPartnerDataValid(true)
         }
 
         if (validations.validateEmptyFields(photo)) {
             setErrorMessagePhoto(ERROR_EMPTY);
             setShowErrorMessagePhoto(true);
+            setPartnerDataValid(false)
         } else if (validations.urlStartsWithHTTPS(photo)) {
             setErrorMessagePhoto('¡La URL debe empezar con el patron "https://"!');
             setShowErrorMessagePhoto(true);
+            setPartnerDataValid(false)
         } else {
             setShowErrorMessagePhoto(false);
+            setPartnerDataValid(true)
         }
 
         if (validations.validateEmptyFields(team)) {
             setErrorMessageTeam(ERROR_EMPTY)
             setShowErrorMessageTeam(true)
+            setPartnerDataValid(false)
         } else {
             setShowErrorMessageTeam(false)
+            setPartnerDataValid(true)
         }
 
-        if (!showErrorMessageName && !showErrorMessagePhoto && !showErrorMessagePosition && !showErrorMessageTeam) {
-            alert('¡Colaborador agregado con exito!')
+        if (partnerDataValid) {
             const data = {
                 name,
                 position,
@@ -78,6 +89,7 @@ const Form = (props) => {
             };
             onSubmitAction(data);
             setPartnerFormEmpty()
+            alert('¡Colaborador agregado con exito!')
         }
     };
 
@@ -87,24 +99,28 @@ const Form = (props) => {
         if (validations.validateEmptyFields(title)) {
             setErrorMessageTeamColor(ERROR_EMPTY);
             setShowErrorMessageTeamColor(true);
+            setTeamDataValid(false);
         } else {
+            setTeamDataValid(true);
             setShowErrorMessageTeamColor(false);
         }
 
         if (validations.validateEmptyFields(secondaryColor)) {
             setErrorMessageColor(ERROR_EMPTY);
             setShowErrorMessageColor(true);
+            setTeamDataValid(false);
         } else {
             setShowErrorMessageColor(false);
+            setTeamDataValid(true);
         }
 
-        if (!showErrorMessageColor && !showErrorMessageTeamColor) {
-            alert('¡Equipo agregado con exito!')
+        if (teamDataValid) {
             onSubmitTeamForm({
                 title,
                 secondaryColor
             });
             setTeamFormEmpty()
+            alert('¡Equipo agregado con exito!')
         }
     }
 
