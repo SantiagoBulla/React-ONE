@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 27px;
+    margin: 50px 27px;
+}
+
+@media (min-width: 720px) {
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 50px 10px;
+        justify-content: flex-start;
+    }
+}

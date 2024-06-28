@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    margin: 0;
+    font-size: 8rem;
+    color: tomato;
+}
+
+span {
+    color: var(--black-color);
+    font-size: 30px;
+    margin-bottom: 15px;
+}

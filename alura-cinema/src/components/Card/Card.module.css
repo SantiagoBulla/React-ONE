@@ -1,0 +1,32 @@
+.container {
+    padding: 0 0 1em 0;
+    margin-top: .5em;
+    width: 340px;
+    background-color: var(--grey-color);
+}
+
+.capa {
+    width: 100%;
+}
+
+.container__info {
+    font-size: 12px;
+    color: var(--black-color);
+    padding: 0 15px;
+}
+
+.container__info h2 {
+    width: 70%;
+    margin: 0 0 15px 0;
+}
+
+@media (min-width: 720px) {
+    .container {
+        width: 345px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        width: 276px;
+    }
+}

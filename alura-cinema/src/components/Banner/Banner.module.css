@@ -1,0 +1,33 @@
+.capa {
+    width: 100%;
+    height: 276px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    opacity: .34;
+}
+
+@media (min-width: 720px) {
+    .capa {
+        height: 300px;
+    }
+}
+
+@media (min-width: 800px) {
+    .capa {
+        width: 100%;
+        height: 276px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .gradient {
+        height: 100%;
+        width: 100%;
+        opacity: .5;
+    }
+}
